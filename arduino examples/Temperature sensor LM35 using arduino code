@@ -1,0 +1,25 @@
+float sensorValue, Celsius, Fahrenheit;
+
+void setup() {
+  //Define the vaults
+  Serial.begin(9600);
+  //Define pin A0 as input
+  pinMode(A0, INPUT);
+  //Define pin 13 as output
+  pinMode(13, OUTPUT);
+}
+void loop() {
+  //Assign analog Pin A0 read to the variable mV
+  sensorValue = analogRead(A0);
+  //Coversion from mV to Celsius
+  Celsius = (sensorValue*5000/1024)/10;
+  Serial.print("Celsius: ");
+  Serial.print(Celsius);
+  if(Celsius<= 30){
+    digitalWrite(13, LOW);
+  }
+ else{
+    digitalWrite(13,HIGH);
+  }
+  delay(2000);
+}
