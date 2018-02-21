@@ -4,8 +4,8 @@
  {Serial.begin(9600);}
  void loop(){
   val = analogRead(tempPin);
-float mv = (val/1024.0)*5000;
-float cel = mv/10;
+float mv = (val*5000/1024);
+float cel = mv*10;
 Serial.print("TEMPERATURE = ");
 Serial.print(cel);
 Serial.print("*C");
