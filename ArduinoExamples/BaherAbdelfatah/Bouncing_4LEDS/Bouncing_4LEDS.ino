@@ -1,0 +1,19 @@
+
+int t = 100;         
+void setup() {
+  for (int PinNo = 4; PinNo < 8; PinNo++) {
+    pinMode(PinNo, OUTPUT);
+  }
+}
+void loop() {
+  for (int PinNo = 4; PinNo < 8; PinNo++) {
+    digitalWrite(PinNo, HIGH);
+    delay(t);
+    digitalWrite(PinNo, LOW);
+  }
+  for (int PinNo = 8; PinNo >= 4; PinNo--) {
+    digitalWrite(PinNo, HIGH);
+    delay(t);
+    digitalWrite(PinNo, LOW);
+  }
+}
