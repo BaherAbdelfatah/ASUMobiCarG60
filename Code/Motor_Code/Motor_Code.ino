@@ -42,6 +42,10 @@ void forward(){
     digitalWrite(r1,0);
       digitalWrite(l2,1);
         digitalWrite(r2,0);
+         digitalWrite(l3,1);
+    digitalWrite(r3,0);
+      digitalWrite(l4,1);
+        digitalWrite(r4,0);
   }
   void right(){
   digitalWrite(l1,0);
