@@ -1,0 +1,23 @@
+if(analogRead(A0)<500)
+Serial.println("black");
+ else 
+ Serial.println("white"); 
+ if(analogRead(A1)<500)
+Serial.println("black");
+ else 
+ Serial.println("white"); 
+ if(analogRead(A2)<500)
+Serial.println("black");
+ else 
+ Serial.println("white"); 
+ if(LOW == digitalRead(signalPin12))
+ Serial.println("black");
+ else 
+ Serial.println("white"); 
+ if(LOW == digitalRead(signalPin13))
+ Serial.println("black");
+ else 
+ Serial.println("white"); 
+ if(Serial.available()){ 
+mode = Serial.read();
+}
